@@ -39,6 +39,19 @@ public class NewLL {
             head = temp;
 
         }
+        
+        void insertAt(int index, int data){
+            Node temp = head;
+            Node newNode = new Node(data);
+
+            for (int i = 0; i < index-1; i++) {
+                temp = temp.next;
+            }
+
+            newNode.next = temp.next;
+            temp.next = newNode;
+
+        }
 
         void display(){
             Node temp = head;
@@ -46,6 +59,14 @@ public class NewLL {
                 System.out.print(temp.data + " ");
                 temp = temp.next;
             }
+        }
+
+        void getElement(int index){
+            Node temp = head;
+            for (int i = 0; i < index; i++) {
+                temp = temp.next;
+            }
+            System.out.println(temp.data);
         }
     }
 
@@ -56,9 +77,14 @@ public class NewLL {
         ll.insertAtEnd(10);
         ll.insertAtEnd(20);
 
-        ll.insertAtHead(150);
+        ll.insertAtHead(15);
+
+        ll.insertAt(1, 32);
 
         ll.display();
+
+        System.out.println("\n");
+        ll.getElement(2);
 
     }
 }
