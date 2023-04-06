@@ -2,31 +2,35 @@ package LinkedList;
 
 public class MyLL {
 
+
     static class Node{
-        int val;
+        int data;
         Node next;
 
-        Node(int val){
-            this.val = val;
+        Node(int data){
+            this.data = data;
         }
     }
 
     static class LL{
-        Node head;
-        Node tail;
+        Node head = null;
+        Node tail = null;
 
-        void insertAtEnd(int val){
-            Node temp = new Node(val);
+        void insertAtEnd(int data){
+            Node temp = new Node(data);
+
             if (head == null){
                 head = tail = temp;
                 return;
             }
             tail.next = temp;
             tail = temp;
+
         }
 
-        void insertAtHead(int val){
-            Node temp = new Node(val);
+        void insertAtHead(int data){
+            Node temp = new Node(data);
+
             if (head == null){
                 head = temp;
                 return;
@@ -37,8 +41,8 @@ public class MyLL {
 
         void display(){
             Node temp = head;
-            while (temp != null){
-                System.out.print(temp.val + " ");
+            while(temp != null){
+                System.out.print(temp.data + " ");
                 temp = temp.next;
             }
         }
@@ -47,17 +51,6 @@ public class MyLL {
 
 
     public static void main(String[] args) {
-
-
-        LL ll = new LL();
-        ll.insertAtEnd(10);
-        ll.insertAtEnd(20);
-        ll.insertAtEnd(30);
-        ll.insertAtEnd(40);
-
-        ll.insertAtHead(100);
-
-        ll.display();
 
 
 
