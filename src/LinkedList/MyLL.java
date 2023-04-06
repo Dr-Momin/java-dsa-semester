@@ -3,49 +3,63 @@ package LinkedList;
 public class MyLL {
 
     static class Node{
-        int data;
+        int val;
         Node next;
 
-        Node(int data){
-            this.data = data;
+        Node(int val){
+            this.val = val;
         }
     }
 
     static class LL{
-        Node head = null;
-        Node tail = null;
+        Node head;
+        Node tail;
 
-        void insertAtEnd(int data){
-            Node temp = new Node(data);
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head == null){
+                head = tail = temp;
+                return;
+            }
+            tail.next = temp;
+            tail = temp;
+        }
+
+        void insertAtHead(int val){
+            Node temp = new Node(val);
             if (head == null){
                 head = temp;
+                return;
             }
-            else{
-                tail.next = temp;
-            }
-            tail = temp;
-
+            temp.next = head;
+            head = temp;
         }
 
         void display(){
             Node temp = head;
             while (temp != null){
-                System.out.print(temp.data + " ");
+                System.out.print(temp.val + " ");
                 temp = temp.next;
             }
         }
 
     }
 
+
     public static void main(String[] args) {
 
+
         LL ll = new LL();
-        ll.insertAtEnd(5);
         ll.insertAtEnd(10);
-        ll.insertAtEnd(15);
-        ll.insertAtEnd(12);
+        ll.insertAtEnd(20);
+        ll.insertAtEnd(30);
+        ll.insertAtEnd(40);
+
+        ll.insertAtHead(100);
 
         ll.display();
+
+
 
 
     }
