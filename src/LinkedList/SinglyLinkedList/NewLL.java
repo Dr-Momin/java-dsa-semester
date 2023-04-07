@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.SinglyLinkedList;
 
 public class NewLL {
 
@@ -53,6 +53,10 @@ public class NewLL {
 
         }
 
+        void deleteAt(int index){
+
+        }
+
         void display(){
             Node temp = head;
             while (temp != null){
@@ -68,6 +72,8 @@ public class NewLL {
             }
             System.out.println(temp.data);
         }
+
+
     }
 
     public static void main(String[] args) {
