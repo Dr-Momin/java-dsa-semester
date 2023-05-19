@@ -14,10 +14,11 @@ public class PracticeLL {
     static class LL{
 
         Node head, tail;
-        int length = 0;
+        int length;
 
         void insertAtEnd(int data){
             Node temp = new Node(data);
+
             if (head == null){
                 head = tail = temp;
                 length++;
@@ -26,16 +27,17 @@ public class PracticeLL {
             tail.next = temp;
             tail = temp;
             length++;
-
         }
 
         void insertAtHead(int data){
             Node temp = new Node(data);
+
             if (head == null){
                 head = temp;
                 length++;
                 return;
             }
+
             temp.next = head;
             head = temp;
             length++;
@@ -45,22 +47,12 @@ public class PracticeLL {
         void insertAtIndex(int data, int index){
             Node temp = head;
             Node newNode = new Node(data);
-            if (index == 0){
-                insertAtHead(data);
-                return;
-            }
-            else if (index == length){
-                insertAtEnd(data);
-                return;
-            }
 
-            for (int i = 0; i < index-1; i++) {
+            for (int i = 0; i < index - 1; i++) {
                 temp = temp.next;
             }
-
             newNode.next = temp.next;
             temp.next = newNode;
-
         }
 
         void display(){
@@ -70,32 +62,6 @@ public class PracticeLL {
                 temp = temp.next;
             }
             System.out.println();
-        }
-
-        void getElement(int index){
-            Node temp = head;
-
-            for (int i = 0; i < index; i++) {
-                temp = temp.next;
-            }
-            System.out.println(temp.data);
-
-        }
-
-        void deleteAt(int index){
-            Node temp = head;
-
-            if (index == 0){
-                head = null;
-                return;
-            }
-
-            for (int i = 0; i < index - 1; i++) {
-                temp = temp.next;
-            }
-
-            temp.next = temp.next.next;
-            
 
         }
 
@@ -114,11 +80,13 @@ public class PracticeLL {
 
 
         ll.insertAtIndex(90, 2);
-
-        ll.display();
-        ll.getElement(2);
-
-        ll.deleteAt(3);
+//
+//        ll.display();
+//        ll.getElement(2);
+//
+//        ll.deleteAt(3);
+        
+        
         ll.display();
 
 
