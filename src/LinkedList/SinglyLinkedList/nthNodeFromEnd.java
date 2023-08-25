@@ -11,6 +11,7 @@ public class nthNodeFromEnd {
         }
     }
 
+<<<<<<< HEAD
     static class LL{
         Node head, tail;
         int length = 0;
@@ -89,30 +90,28 @@ public class nthNodeFromEnd {
 
 
 
+=======
+>>>>>>> 69b980b38e7a2191e79b8fcb7f8014d9d0b937f1
 
     public static void main(String[] args) {
 
-        // m =  total number of nodes
-        // nth from last = (m-n+1) node from start
+        // Question from LeetCode
+        // Solution
 
-        LL ll = new LL();
-        ll.insertAtEnd(10);
-        ll.insertAtEnd(20);
-        ll.insertAtEnd(30);
-        ll.insertAtEnd(40);
-        ll.insertAtEnd(50);
-        ll.insertAtEnd(60);
+        // started
 
-        ll.display();
+        // minor changes
+        // minor changes
 
 
+<<<<<<< HEAD
         System.out.println(ll.getNodeFromEnd(3));
 
         System.out.println(ll.getNodeFromEndInOneIteration(2));
 
         ll.deleteNodeFromEndInOneIteration(6);
 
+=======
+>>>>>>> 69b980b38e7a2191e79b8fcb7f8014d9d0b937f1
     }
-
-
 }
