@@ -50,6 +50,41 @@ public class nthNodeFromEnd {
             return temp.data;
         }
 
+        int getNodeFromEndInOneIteration(int index){
+
+            Node slow = head, fast = head;
+            for (int i = 0; i < index; i++) {
+                fast = fast.next;
+            }
+            while(fast != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            return slow.data;
+        }
+
+        void deleteNodeFromEndInOneIteration(int index){
+            Node slow = head, fast = head;
+            for (int i = 0; i < index; i++) {
+                fast = fast.next;
+            }
+
+            if (fast == null){
+                head = head.next;
+            }
+            else{
+                while(fast.next != null){
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+            }
+
+            slow.next = slow.next.next;
+
+            display();
+        }
+
     }
 
 
@@ -72,6 +107,10 @@ public class nthNodeFromEnd {
 
 
         System.out.println(ll.getNodeFromEnd(3));
+
+        System.out.println(ll.getNodeFromEndInOneIteration(2));
+
+        ll.deleteNodeFromEndInOneIteration(6);
 
     }
 
