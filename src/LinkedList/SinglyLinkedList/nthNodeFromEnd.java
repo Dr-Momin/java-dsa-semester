@@ -11,7 +11,7 @@ public class nthNodeFromEnd {
         }
     }
 
-<<<<<<< HEAD
+
     static class LL{
         Node head, tail;
         int length = 0;
@@ -90,8 +90,6 @@ public class nthNodeFromEnd {
 
 
 
-=======
->>>>>>> 69b980b38e7a2191e79b8fcb7f8014d9d0b937f1
 
     public static void main(String[] args) {
 
@@ -104,14 +102,6 @@ public class nthNodeFromEnd {
         // minor changes
 
 
-<<<<<<< HEAD
-        System.out.println(ll.getNodeFromEnd(3));
 
-        System.out.println(ll.getNodeFromEndInOneIteration(2));
-
-        ll.deleteNodeFromEndInOneIteration(6);
-
-=======
->>>>>>> 69b980b38e7a2191e79b8fcb7f8014d9d0b937f1
     }
 }
