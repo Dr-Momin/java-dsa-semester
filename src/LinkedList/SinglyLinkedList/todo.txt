@@ -1,0 +1,18 @@
+
+// insertAtEnd(data)
+// insertAtEndWithoutTail()
+// insertAtHead(data)
+// insertAtIndex(index, data)
+
+
+// deleteAtIndex(index);
+// deleteAtEnd()
+// deleteAtHead()
+
+
+// length()
+// display()
+// displayRecursively()
+// getElement(index)
+
+
