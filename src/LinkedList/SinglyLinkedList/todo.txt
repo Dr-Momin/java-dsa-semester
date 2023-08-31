@@ -16,3 +16,12 @@
 // getElement(index)
 
 
+==========================
+Questions
+==========================
+1. Find nth node from the end of the linked list.
+
+2. Find nth node from the end of linked list, only in one traversal.
+
+3.
+

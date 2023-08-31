@@ -156,6 +156,44 @@ public class MyNewLL {
             return temp.data;
         }
 
+
+        void getNthNodeFromLast(int index){
+            Node temp = head;
+            int length = 0;
+
+            while(temp != null){
+                length++;
+                temp = temp.next;
+            }
+
+            int m = length;
+            int n = (m - index);
+
+            temp = head;
+            for (int i = 0; i < n; i++) {
+                temp = temp.next;
+            }
+
+            System.out.println("\nNth Node from Last: " + temp.data);
+
+        }
+
+
+        Node getNthNodeFromLastInOneTraversal(int index){
+            Node slow, fast;
+            slow = fast = head;
+            for (int i = 0; i < index; i++) {
+                fast = fast.next;
+            }
+
+            while(fast != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            return slow;
+        }
+
     }
 
     public static void main(String[] args) {
@@ -174,12 +212,17 @@ public class MyNewLL {
 
 
 
+//        l.display();
+//
+//        System.out.println();
+//        l.deleteAtIndex(0);
+
         l.display();
 
-        System.out.println();
-        l.deleteAtIndex(0);
+        l.getNthNodeFromLast(3);
 
-        l.display();
+        Node n =l.getNthNodeFromLastInOneTraversal(3);
+        System.out.println(n.data);
 
     }
 }
