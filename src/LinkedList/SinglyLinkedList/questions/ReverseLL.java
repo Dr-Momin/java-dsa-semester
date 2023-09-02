@@ -30,109 +30,6 @@ public class ReverseLL {
             length++;
         }
 
-        void insertAtEndWithoutTail(int data){
-            Node current = head;
-            Node newNode = new Node(data);
-
-            if(head == null){
-                head = newNode;
-                length++;
-                return;
-            }
-
-            while(current.next != null){
-                current = current.next;
-            }
-
-            current.next = newNode;
-            current = newNode;
-            length++;
-
-        }
-
-
-        void insertAtHead(int data){
-            Node newNode = new Node(data);
-
-            if (head == null){
-                head = newNode;
-                length++;
-                return;
-            }
-
-            newNode.next = head;
-            head = newNode;
-            length++;
-        }
-
-
-        void insertAtIndex(int index, int data){
-            Node newNode = new Node(data);
-            Node current = head;
-
-            if(index < 0 || index > length){
-                System.out.println("Invalid Index!!!");
-                return;
-            }
-
-            if(index == 0){
-                insertAtHead(data);
-                return;
-            }
-
-            if(index == length){
-                insertAtEnd(data);
-                return;
-            }
-
-            for (int i = 0; i < index; i++) {
-                current = current.next;
-            }
-
-            newNode.next = current.next;
-            current.next = newNode;
-
-        }
-
-
-        void deleteAtHead(){
-            head = head.next;
-        }
-
-        void deleteAtEnd(){
-            Node current = head;
-
-//            // Method 01: When you knows the length
-//            for (int i = 0; i < length-2; i++) {
-//                current = current.next;
-//            }
-//
-//            current.next = current.next.next;
-
-            // Method 02: When you don't know the length
-            while(current.next.next != null){
-                current = current.next;
-            }
-
-            current.next = current.next.next;
-
-        }
-
-
-        void deleteAtIndex(int index){
-            Node current = head;
-
-            if(index < 0 || index > length){
-                System.out.println("Invalid Index!!");
-                return;
-            }
-
-            for (int i = 0; i < index-1; i++) {
-                current = current.next;
-            }
-
-            current.next = current.next.next;
-        }
 
 
         void display(){
@@ -145,14 +42,27 @@ public class ReverseLL {
         }
 
 
-        int getElement(int index){
-            Node current = head;
+        void reverseLL(){
+            Node prev, curr, next;
 
-            for (int i = 0; i < index; i++) {
-                current = current.next;
+            prev = head;
+            curr = head.next;
+
+
+            while(curr != null){
+
+                next = curr.next;
+                curr.next = prev;
+
+                prev = curr;
+                curr = next;
+
             }
 
-            return current.data;
+            head.next = null;
+            head = prev;
+
+
         }
 
     }
@@ -183,7 +93,11 @@ public class ReverseLL {
 //        list.display();
 
 
-        System.out.println(list.getElement(3));
+        System.out.println();
+        list.reverseLL();
+        list.display();
+
+
 
 
     }
