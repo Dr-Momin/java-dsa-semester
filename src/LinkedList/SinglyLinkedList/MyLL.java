@@ -1,5 +1,7 @@
 package LinkedList.SinglyLinkedList;
 
+import LinkedList.SinglyLinkedList.questions.ReverseLL;
+
 public class MyLL {
 
 
@@ -9,91 +11,171 @@ public class MyLL {
 
         Node(int data){
             this.data = data;
+            this.next = null;
         }
     }
 
     static class LL{
-        Node head = null;
-        Node tail = null;
 
+        Node head, tail;
+        private int length = 0;
 
         void insertAtEnd(int data){
-            Node temp = new Node(data);
-            if (head == null){
-                head = tail = temp;
-            }
-            else{
-                tail.next = temp;
-            }
+            Node newNode = new Node(data);
 
-            tail = temp;
+            if(head == null){
+                head = tail = newNode;
+                length++;
+                return;
+            }
+            tail.next = newNode;  // to link to next node
+            tail = newNode;   // to move pointer one step forward
+            length++;
         }
 
-        void insertAtHead(int data){
-            Node temp = new Node(data);
-            if (head == null){
-                head = temp;
+        void insertAtEndWithoutTail(int data){
+            Node current = head;
+            Node newNode = new Node(data);
+
+            if(head == null){
+                head = newNode;
+                length++;
                 return;
             }
 
-            temp.next = head;
-            head = temp;
+            while(current.next != null){
+                current = current.next;
+            }
+
+            current.next = newNode;
+            current = newNode;
+            length++;
 
         }
 
-        void insertAt(int index, int data){
-            Node temp = head;
+
+        void insertAtHead(int data){
             Node newNode = new Node(data);
 
-            for (int i = 0; i < index-1; i++) {
-                temp = temp.next;
+            if (head == null){
+                head = newNode;
+                length++;
+                return;
             }
 
-            newNode.next = temp.next;
-            temp.next = newNode;
+            newNode.next = head;
+            head = newNode;
+            length++;
+        }
+
+
+        void insertAtIndex(int index, int data){
+            Node newNode = new Node(data);
+            Node current = head;
+
+            if(index < 0 || index > length){
+                System.out.println("Invalid Index!!!");
+                return;
+            }
+
+            if(index == 0){
+                insertAtHead(data);
+                return;
+            }
+
+            if(index == length){
+                insertAtEnd(data);
+                return;
+            }
+
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+
+            newNode.next = current.next;
+            current.next = newNode;
 
         }
 
-        void deleteAt(int index){
+
+        void deleteAtHead(){
+            head = head.next;
+        }
+
+        void deleteAtEnd(){
+            Node current = head;
+
+//            // Method 01: When you knows the length
+//            for (int i = 0; i < length-2; i++) {
+//                current = current.next;
+//            }
+//
+//            current.next = current.next.next;
+
+            // Method 02: When you don't know the length
+            while(current.next.next != null){
+                current = current.next;
+            }
+
+            current.next = current.next.next;
 
         }
+
+
+        void deleteAtIndex(int index){
+            Node current = head;
+
+            if(index < 0 || index > length){
+                System.out.println("Invalid Index!!");
+                return;
+            }
+
+            for (int i = 0; i < index-1; i++) {
+                current = current.next;
+            }
+
+            current.next = current.next.next;
+        }
+
 
         void display(){
-            Node temp = head;
-            while (temp != null){
-                System.out.print(temp.data + " ");
-                temp = temp.next;
+            Node current = head;
+            System.out.println();
+            while(current != null){
+                System.out.print(current.data + " ");
+                current = current.next;
             }
         }
 
-        void getElement(int index){
-            Node temp = head;
+
+        int getElement(int index){
+            Node current = head;
+
             for (int i = 0; i < index; i++) {
-                temp = temp.next;
+                current = current.next;
             }
-            System.out.println(temp.data);
-        }
 
+            return current.data;
+        }
 
     }
+
 
 
     public static void main(String[] args) {
 
 
-        LL ll = new LL();
+        LL list = new LL();
 
-        ll.insertAtEnd(10);
-        ll.insertAtEnd(20);
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
 
-        ll.insertAtHead(15);
+        list.insertAtHead(15);
 
-        ll.insertAt(1, 32);
-
-        ll.display();
+        list.display();
 
         System.out.println("\n");
-        ll.getElement(2);
+        list.getElement(2);
 
     }
 
