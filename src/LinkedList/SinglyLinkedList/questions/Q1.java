@@ -1,6 +1,6 @@
 package LinkedList.SinglyLinkedList.questions;
 import LinkedList.SinglyLinkedList.MyLL;
-
+import LinkedList.SinglyLinkedList.MyLL.Node;
 
 // Q1: Find nth node from the end of the list?
 // Note: Only head is given,  no tail and length is given.
@@ -8,8 +8,20 @@ import LinkedList.SinglyLinkedList.MyLL;
 
 public class Q1 {
 
-    public static void findNthNodeFromEndOfLinkedList(MyLL.Node head, int indexFromEnd){
-        MyLL.Node currNode = head;
+    public static void deleteAtEnd(Node head){
+        Node current = head;
+
+        // Method 02: When you don't know the length
+        while(current.next.next != null){
+            current = current.next;
+        }
+
+        current.next = current.next.next;
+
+    }
+
+    public static void findNthNodeFromEndOfLinkedList(Node head, int indexFromEnd){
+        Node currNode = head;
         int length = 0;
 
         while (currNode != null){
@@ -29,6 +41,45 @@ public class Q1 {
 
     }
 
+    public static void findNthNodeFromEndInOneTraversal(Node head, int indexFromEnd){
+        Node slow = head, fast = head;
+
+        for (int i = 0; i < indexFromEnd; i++) {
+            fast = fast.next;
+        }
+
+        while(fast != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        System.out.println(slow.data);
+    }
+
+
+    public static void removeNthNodeFromEnd(Node head, int indexFromEnd){
+        Node slow = head;
+        Node fast = head;
+
+        if(indexFromEnd == 1){
+            deleteAtEnd(head);
+            return;
+        }
+
+        for (int i = 0; i < indexFromEnd; i++) {
+            fast = fast.next;
+        }
+
+        while (fast != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        slow.data = slow.next.data;
+        slow.next = slow.next.next;
+
+    }
+
     public static void main(String[] args) {
 
         MyLL.LL list = new MyLL.LL();
@@ -38,10 +89,25 @@ public class Q1 {
         list.insertAtEnd(40);
         list.insertAtEnd(50);
 
+        // Getting head
+        Node head = list.getHead();
+
 
         // Q1: Find nth node from the end of the list?
         // Note: Only head is given,  no tail and length is given.
-        findNthNodeFromEndOfLinkedList(list.getHead(), 4);
+        findNthNodeFromEndOfLinkedList(head, 4);
+
+
+
+        // 2. Find nth node from the end of list. (Note: Only in One traversal).
+        findNthNodeFromEndInOneTraversal(head, 5);
+
+
+
+//        removeNthNodeFromEndOfLL(head, 2);
+
+        removeNthNodeFromEnd(head, 5);
+        list.display();
 
 
     }

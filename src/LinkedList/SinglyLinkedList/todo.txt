@@ -21,25 +21,18 @@
 // Detect a cycle in LL & Trick to remove Cycle
 
 
-==========================
-Questions
-==========================
-1. Find nth node from the end of the linked list.
 
-2. Find nth node from the end of linked list, only in one traversal.
-
-
-==========================
+============================
 Interview Questions
 ==========================
 
 1. Find nth node from the end of the list.
 2. Find nth node from the end of list. (Note: Only in One traversal).
 
+3. Remove nth node from the end of the linked list. (Note: in one Traversal)
 
 
-
-
+4. Finding intersection of two Linked list.
 
 
 
