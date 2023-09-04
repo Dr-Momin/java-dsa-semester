@@ -1,0 +1,33 @@
+
+
+
+
+// insertAtEnd(data)
+// insertAtEndWithoutTail()
+// insertAtHead(data)
+// insertAtIndex(index, data)
+
+
+// deleteAtIndex(index);
+// deleteAtEnd()
+// deleteAtHead()
+
+
+// length()
+// display()
+// displayRecursively()
+// getElement(index)
+
+
+
+
+==========================
+Questions
+==========================
+1. Delete Head When Tail is given.
+2. Delete Head When Tail is not given.
+3.
+
+
+
+
