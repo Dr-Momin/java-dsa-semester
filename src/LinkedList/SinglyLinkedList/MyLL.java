@@ -15,12 +15,12 @@ public class MyLL {
         }
     }
 
-    static class LL{
+    public static class LL{
 
         Node head, tail;
         private int length = 0;
 
-        void insertAtEnd(int data){
+        public void insertAtEnd(int data){
             Node newNode = new Node(data);
 
             if(head == null){
@@ -33,7 +33,7 @@ public class MyLL {
             length++;
         }
 
-        void insertAtEndWithoutTail(int data){
+        public void insertAtEndWithoutTail(int data){
             Node current = head;
             Node newNode = new Node(data);
 
@@ -54,7 +54,7 @@ public class MyLL {
         }
 
 
-        void insertAtHead(int data){
+        public void insertAtHead(int data){
             Node newNode = new Node(data);
 
             if (head == null){
@@ -69,7 +69,7 @@ public class MyLL {
         }
 
 
-        void insertAtIndex(int index, int data){
+        public void insertAtIndex(int index, int data){
             Node newNode = new Node(data);
             Node current = head;
 
@@ -98,11 +98,11 @@ public class MyLL {
         }
 
 
-        void deleteAtHead(){
+        public void deleteAtHead(){
             head = head.next;
         }
 
-        void deleteAtEnd(){
+        public void deleteAtEnd(){
             Node current = head;
 
 //            // Method 01: When you knows the length
@@ -122,7 +122,7 @@ public class MyLL {
         }
 
 
-        void deleteAtIndex(int index){
+        public void deleteAtIndex(int index){
             Node current = head;
 
             if(index < 0 || index > length){
@@ -138,7 +138,7 @@ public class MyLL {
         }
 
 
-        void display(){
+        public void display(){
             Node current = head;
             System.out.println();
             while(current != null){
@@ -148,7 +148,7 @@ public class MyLL {
         }
 
 
-        int getElement(int index){
+        public int getElement(int index){
             Node current = head;
 
             for (int i = 0; i < index; i++) {

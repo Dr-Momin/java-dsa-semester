@@ -16,11 +16,11 @@ public class MyDLL {
     }
 
 
-    static class DLL{
+    public static class DLL{
         Node head, tail;
 
 
-        void insertAtHead(int data){
+        public void insertAtHead(int data){
             Node newNode = new Node(data);
 
             if(head == null){
@@ -34,7 +34,7 @@ public class MyDLL {
 
         }
 
-        void insertAtEnd(int data){
+        public void insertAtEnd(int data){
             Node newNode = new Node(data);
 
             if (head == null){
@@ -50,7 +50,7 @@ public class MyDLL {
         }
 
 
-        void insertAtIndex(int index, int data){
+        public void insertAtIndex(int index, int data){
             Node newNode = new Node(data);
             Node currNode = head;
 
@@ -71,18 +71,18 @@ public class MyDLL {
 
 
 
-        void deleteHead(){
+        public void deleteHead(){
             head = head.next;
             head.prev = null;
         }
 
-        void deleteTail(){
+        public void deleteTail(){
             Node temp = tail.prev;
             temp.next = null;
             tail = temp;
         }
 
-        void deleteAtIndex(int index){
+        public void deleteAtIndex(int index){
             Node currNode = head;
             for (int i = 0; i < index-1; i++) {
                 currNode = currNode.next;
@@ -95,7 +95,7 @@ public class MyDLL {
         }
 
 
-        void display(){
+        public void display(){
             Node currNode = head;
             while(currNode != null){
                 System.out.print(currNode.data + " ");
@@ -104,7 +104,7 @@ public class MyDLL {
             System.out.println();
         }
 
-        void displayReverse(){
+        public void displayReverse(){
             Node currNode = tail;
             while(currNode != null){
                 System.out.print(currNode.data + " ");
@@ -114,7 +114,7 @@ public class MyDLL {
             System.out.println();
         }
 
-        void displayInDetail(){
+        public void displayInDetail(){
             Node current = head;
             while(current != null){
                 System.out.print(current.prev + " " + current.data + " " + current.next  + " ---> \n");
