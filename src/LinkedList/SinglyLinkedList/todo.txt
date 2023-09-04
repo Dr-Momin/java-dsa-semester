@@ -29,4 +29,23 @@ Questions
 2. Find nth node from the end of linked list, only in one traversal.
 
 
+==========================
+Interview Questions
+==========================
+
+1. Find nth node from the end of the list.
+2. Find nth node from the end of list. (Note: Only in One traversal).
+
+
+
+
+
+
+
+
+
+
+
+
+
 

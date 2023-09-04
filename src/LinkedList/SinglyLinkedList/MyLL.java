@@ -5,9 +5,9 @@ import LinkedList.SinglyLinkedList.questions.ReverseLL;
 public class MyLL {
 
 
-    static class Node{
-        int data;
-        Node next;
+    public static class Node{
+        public int data;
+        public Node next;
 
         Node(int data){
             this.data = data;
@@ -20,6 +20,22 @@ public class MyLL {
         Node head, tail;
         private int length = 0;
 
+
+        // Getter Setters
+        public Node getHead() {
+            return head;
+        }
+
+        public Node getTail() {
+            return tail;
+        }
+
+        public int getLength() {
+            return length;
+        }
+
+
+        // Methods
         public void insertAtEnd(int data){
             Node newNode = new Node(data);
 
