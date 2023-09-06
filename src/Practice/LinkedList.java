@@ -203,7 +203,39 @@ public class LinkedList {
 
         }
 
+        public boolean isPalindrome(){
+            LL list1 = new LL();
+            list1.head = head;
 
+            LL list2 = new LL();
+            list2.head = head;
+            list2.reverseLinkedList();
+
+            Node l1 = list1.head, l2 = list2.head;
+            while (l1 != null ){
+                if(l1.data != l2.data){
+                    return false;
+                }
+                l1 = l1.next;
+            }
+
+            return true;
+        }
+
+
+        public boolean hasCycle(){
+            Node slow = head, fast = head.next.next;
+            while (fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if(fast == slow){
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
     }
 
@@ -226,8 +258,17 @@ public class LinkedList {
 
 //        list.displayReverseRecursively(list.head);
 
-        list.makeCircular();
-        list.displayCircularList();
+//        list.makeCircular();
+//        list.displayCircularList();
+        System.out.println(list.hasCycle());
+
+
+//        list.insertAtEnd(1);
+//        list.insertAtEnd(2);
+//        list.insertAtEnd(2);
+//        list.insertAtEnd(1);
+//
+//        System.out.println(list.isPalindrome());
 
     }
 }

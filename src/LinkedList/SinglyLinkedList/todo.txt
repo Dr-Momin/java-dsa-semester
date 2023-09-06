@@ -20,7 +20,7 @@
 
 // makeCircular()
 // isPalindrome()
-
+// hasCycle()
 
 
 // Check List is Palindrome or not
