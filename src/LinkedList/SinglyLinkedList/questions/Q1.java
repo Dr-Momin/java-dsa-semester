@@ -103,11 +103,13 @@ public class Q1 {
         findNthNodeFromEndInOneTraversal(head, 5);
 
 
-
-//        removeNthNodeFromEndOfLL(head, 2);
-
+        // 3. Remove nth node from the end of the linked list. (Note: in one Traversal)
         removeNthNodeFromEnd(head, 5);
         list.display();
+
+
+
+
 
 
     }
