@@ -12,11 +12,17 @@
 
 // length()
 // display()
+// displayReverse()
+// displayReverseRecursively()
 // displayRecursively()
 // getElement(index)
 
 
-// Reverse a Linked List
+// makeCircular()
+// isPalindrome()
+
+
+
 // Check List is Palindrome or not
 // Detect a cycle in LL & Trick to remove Cycle
 
