@@ -12,7 +12,7 @@
 
 // length()
 // display()
-// displayReverse()
+// reverseLinkedList()
 // displayReverseRecursively()
 // displayRecursively()
 // getElement(index)
