@@ -129,6 +129,41 @@ public class LinkedList {
             head = head.next;
         }
 
+        public void findNthNodeFromEnd(int indexFromLast){
+            Node slow = head, fast = head;
+
+            for (int i = 0; i < indexFromLast; i++) {
+                fast = fast.next;
+            }
+
+            while(fast != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            System.out.print(slow.data + " ");
+        }
+
+        public void deleteNthNodeFromEnd(int indexFromLast){
+
+            if(indexFromLast == length()){
+                deleteAtHead();
+                return;
+            }
+
+            Node slow = head, fast = head;
+            for (int i = 0; i < indexFromLast+1; i++) {
+                fast = fast.next;
+            }
+
+            while (fast != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            slow.next = slow.next.next;
+
+        }
 
         public int length(){
             int length = 0;
@@ -260,7 +295,13 @@ public class LinkedList {
 
 //        list.makeCircular();
 //        list.displayCircularList();
-        System.out.println(list.hasCycle());
+//        System.out.println(list.hasCycle());
+
+
+//        list.findNthNodeFromEnd(3);
+        list.display();
+        list.deleteNthNodeFromEnd(4);
+        list.display();
 
 
 //        list.insertAtEnd(1);
