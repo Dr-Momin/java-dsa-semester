@@ -14,45 +14,77 @@ public class StackUsingLL {
         }
 
         void push(int data){
-            Node temp = new Node(data);
-            temp.next = head;
-            head = temp;
+            Node newNode = new Node(data);
 
-            size++;
-        }
-
-
-        int peek(){
             if(head == null){
-                System.out.println("Stack is Empty!!");
-                return -1;
+                head = newNode;
+                return;
             }
 
-            return head.data;
+            head.next = newNode;
+            head = newNode;
 
         }
 
         int pop(){
-            if(head == null){
-                System.out.println("Stack is Empty!!");
+            if (head == null){
+                System.out.println("List is Empty");
                 return -1;
             }
 
-            int result = head.data;
+            int data = head.data;
             head = head.next;
-            size--;
 
-            return result;
+            return data;
         }
 
 
-        boolean isEmpty(){
-            return head == null;
-        }
-
-        int size(){
-            return size;
-        }
+//
+//        StackLL(){
+//            head = null;
+//            size = 0;
+//        }
+//
+//        void push(int data){
+//            Node temp = new Node(data);
+//            temp.next = head;
+//            head = temp;
+//
+//            size++;
+//        }
+//
+//
+//        int peek(){
+//            if(head == null){
+//                System.out.println("Stack is Empty!!");
+//                return -1;
+//            }
+//
+//            return head.data;
+//
+//        }
+//
+//        int pop(){
+//            if(head == null){
+//                System.out.println("Stack is Empty!!");
+//                return -1;
+//            }
+//
+//            int result = head.data;
+//            head = head.next;
+//            size--;
+//
+//            return result;
+//        }
+//
+//
+//        boolean isEmpty(){
+//            return head == null;
+//        }
+//
+//        int size(){
+//            return size;
+//        }
 
     }
 
