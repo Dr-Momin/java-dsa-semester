@@ -1,97 +1,197 @@
 package LinkedList.SinglyLinkedList;
 
+import LinkedList.SinglyLinkedList.questions.ReverseLL;
+
 public class MyLL {
 
 
-    static class Node{
-        int data;
-        Node next;
+    public static class Node{
+        public int data;
+        public Node next;
 
         Node(int data){
             this.data = data;
+            this.next = null;
         }
     }
 
-    static class LL{
-        Node head = null;
-        Node tail = null;
+    public static class LL{
+
+        Node head, tail;
+        private int length = 0;
 
 
-        void insertAtEnd(int data){
-            Node temp = new Node(data);
-            if (head == null){
-                head = tail = temp;
-            }
-
-            tail.next = temp;
-            tail = temp;
+        // Getter Setters
+        public Node getHead() {
+            return head;
         }
 
-        void insertAtHead(int data){
-            Node temp = new Node(data);
-            if (head == null){
-                head = temp;
+        public Node getTail() {
+            return tail;
+        }
+
+        public int getLength() {
+            return length;
+        }
+
+
+        // Methods
+        public void insertAtEnd(int data){
+            Node newNode = new Node(data);
+
+            if(head == null){
+                head = tail = newNode;
+                length++;
+                return;
+            }
+            tail.next = newNode;  // to link to next node
+            tail = newNode;   // to move pointer one step forward
+            length++;
+        }
+
+        public void insertAtEndWithoutTail(int data){
+            Node current = head;
+            Node newNode = new Node(data);
+
+            if(head == null){
+                head = newNode;
+                length++;
                 return;
             }
 
-            temp.next = head;
-            head = temp;
+            while(current.next != null){
+                current = current.next;
+            }
+
+            current.next = newNode;
+            current = newNode;
+            length++;
 
         }
 
-        void insertAt(int index, int data){
-            Node temp = head;
+
+        public void insertAtHead(int data){
             Node newNode = new Node(data);
 
-            for (int i = 0; i < index-1; i++) {
-                temp = temp.next;
+            if (head == null){
+                head = newNode;
+                length++;
+                return;
             }
 
-            newNode.next = temp.next;
-            temp.next = newNode;
-
+            newNode.next = head;
+            head = newNode;
+            length++;
         }
 
-        void deleteAt(int index){
 
-        }
+        public void insertAtIndex(int index, int data){
+            Node newNode = new Node(data);
+            Node current = head;
 
-        void display(){
-            Node temp = head;
-            while (temp != null){
-                System.out.print(temp.data + " ");
-                temp = temp.next;
+            if(index < 0 || index > length){
+                System.out.println("Invalid Index!!!");
+                return;
             }
-        }
 
-        void getElement(int index){
-            Node temp = head;
+            if(index == 0){
+                insertAtHead(data);
+                return;
+            }
+
+            if(index == length){
+                insertAtEnd(data);
+                return;
+            }
+
             for (int i = 0; i < index; i++) {
-                temp = temp.next;
+                current = current.next;
             }
-            System.out.println(temp.data);
+
+            newNode.next = current.next;
+            current.next = newNode;
+
         }
 
+
+        public void deleteAtHead(){
+            head = head.next;
+        }
+
+        public void deleteAtEnd(){
+            Node current = head;
+
+//            // Method 01: When you knows the length
+//            for (int i = 0; i < length-2; i++) {
+//                current = current.next;
+//            }
+//
+//            current.next = current.next.next;
+
+            // Method 02: When you don't know the length
+            while(current.next.next != null){
+                current = current.next;
+            }
+
+            current.next = current.next.next;
+
+        }
+
+
+        public void deleteAtIndex(int index){
+            Node current = head;
+
+            if(index < 0 || index > length){
+                System.out.println("Invalid Index!!");
+                return;
+            }
+
+            for (int i = 0; i < index-1; i++) {
+                current = current.next;
+            }
+
+            current.next = current.next.next;
+        }
+
+
+        public void display(){
+            Node current = head;
+            System.out.println();
+            while(current != null){
+                System.out.print(current.data + " ");
+                current = current.next;
+            }
+        }
+
+
+        public int getElement(int index){
+            Node current = head;
+
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+
+            return current.data;
+        }
 
     }
+
 
 
     public static void main(String[] args) {
 
 
-        LL ll = new LL();
+        LL list = new LL();
 
-        ll.insertAtEnd(10);
-        ll.insertAtEnd(20);
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
 
-        ll.insertAtHead(15);
+        list.insertAtHead(15);
 
-        ll.insertAt(1, 32);
-
-        ll.display();
+        list.display();
 
         System.out.println("\n");
-        ll.getElement(2);
+        list.getElement(2);
 
     }
 

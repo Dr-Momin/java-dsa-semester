@@ -1,0 +1,33 @@
+
+// TODO: Functions
+// insertAtBeginning(String name)
+// insertAtBeginning(Node node)
+// insertAtEnd(String name)
+// insertAtEnd(Node node)
+// insertAfterName(String name, Node node)
+// insertBeforeName(String name, Node node)
+// makeCircular()
+// printAll()
+
+
+
+// insertAtEnd(data)
+// insertAtEndWithoutTail()
+// insertAtHead(data)
+// insertAtIndex(index, data)
+
+
+// deleteAtIndex(index);
+// deleteAtEnd()
+// deleteAtHead()
+
+
+// length()
+// display()
+// displayRecursively()
+// getElement(index)
+
+
+// Reverse a Linked List
+// Check List is Palindrome or not
+// Detect a cycle in LL & Trick to remove Cycle
