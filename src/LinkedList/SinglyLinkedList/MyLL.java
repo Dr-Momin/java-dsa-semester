@@ -22,10 +22,8 @@ public class MyLL {
             if (head == null){
                 head = tail = temp;
             }
-            else{
-                tail.next = temp;
-            }
 
+            tail.next = temp;
             tail = temp;
         }
 
