@@ -1,10 +1,10 @@
 package LinkedList.SinglyLinkedList.questions;
-import LinkedList.SinglyLinkedList.MyLL;
-import LinkedList.SinglyLinkedList.MyLL.Node;
 
 // Q1: Find nth node from the end of the list?
 // Note: Only head is given,  no tail and length is given.
 
+
+import LinkedList.SinglyLinkedList.Node;
 
 public class Q1 {
 
@@ -82,32 +82,32 @@ public class Q1 {
 
     public static void main(String[] args) {
 
-        MyLL.LL list = new MyLL.LL();
-        list.insertAtEnd(10);
-        list.insertAtEnd(20);
-        list.insertAtEnd(30);
-        list.insertAtEnd(40);
-        list.insertAtEnd(50);
-
-        // Getting head
-        Node head = list.getHead();
-
-
-        // Q1: Find nth node from the end of the list?
-        // Note: Only head is given,  no tail and length is given.
-        findNthNodeFromEndOfLinkedList(head, 4);
-
-
-
-        // 2. Find nth node from the end of list. (Note: Only in One traversal).
-        findNthNodeFromEndInOneTraversal(head, 5);
-
-
-        // 3. Remove nth node from the end of the linked list. (Note: in one Traversal)
-        removeNthNodeFromEnd(head, 5);
-        list.display();
-
-
+//        MyLL.LL list = new MyLL.LL();
+//        list.insertAtEnd(10);
+//        list.insertAtEnd(20);
+//        list.insertAtEnd(30);
+//        list.insertAtEnd(40);
+//        list.insertAtEnd(50);
+//
+//        // Getting head
+//        Node head = list.getHead();
+//
+//
+//        // Q1: Find nth node from the end of the list?
+//        // Note: Only head is given,  no tail and length is given.
+//        findNthNodeFromEndOfLinkedList(head, 4);
+//
+//
+//
+//        // 2. Find nth node from the end of list. (Note: Only in One traversal).
+//        findNthNodeFromEndInOneTraversal(head, 5);
+//
+//
+//        // 3. Remove nth node from the end of the linked list. (Note: in one Traversal)
+//        removeNthNodeFromEnd(head, 5);
+//        list.display();
+//
+//
 
 
 

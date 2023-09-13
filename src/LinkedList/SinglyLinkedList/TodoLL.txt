@@ -1,25 +1,28 @@
-
-// TODO: BASIC Functions
-// insertAtBeginning(String name)
-// insertAtBeginning(Node node)
-// insertAtEnd(String name)
-// insertAtEnd(Node node)
-// insertAtEndWithoutTail(int data)
-// insertAfterName(String name, Node node)
-// insertBeforeName(String name, Node node)
-// deleteAtIndex(index);
-// deleteAtEnd()
-// deleteAtHead()
-
+// TODO: BASIC NECESSARY Functions
+// isEmpty()
 // printAll()
 // length()
 // display()
 // displayRecursively()
-// getElement(index)
+// getElement(int index)
+
+
+// TODO: BASIC Functions
+// insertAtBeginning(int data)
+// insertAtBeginning(Node node)
+// insertAtEnd(int data)
+// insertAtEnd(Node node)
+// insertAtEndWithoutTail(int data)
+// insertAfterName(int data, Node node)
+// insertBeforeName(int data, Node node)
+// deleteAtIndex(index);
+// deleteAtEnd()
+// deleteAtHead()
 
 
 // TODO: ADVANCE Functions
 // makeCircular()
+// displayCircular()
 // isCircularLL()  or hasCycle()
 // isPalindrome()
 // findNthNodeFromEnd(int index)
