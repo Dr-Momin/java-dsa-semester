@@ -1,24 +1,6 @@
 package LinkedList.SinglyLinkedList;
 
-public class BasicLinkedList {
-
-    Node head, tail;
-    private int length = 0;
-
-
-    // TODO: Getter Setters
-    public Node getHead() {
-        return head;
-    }
-
-    public Node getTail() {
-        return tail;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
+public class BasicLinkedList extends SimpleLinkedList{
 
     // TODO: BASIC Methods
     public void insertAtEnd(int data) {
@@ -139,29 +121,6 @@ public class BasicLinkedList {
     }
 
 
-    public void display() {
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
-        }
-        System.out.println();
-    }
-
-
-    public int getElement(int index) {
-        Node current = head;
-
-        for (int i = 0; i < index; i++) {
-            current = current.next;
-        }
-
-        return current.data;
-    }
-
-    public boolean isEmpty() {
-        return head == null;
-    }
 
 
     public static void main(String[] args) {

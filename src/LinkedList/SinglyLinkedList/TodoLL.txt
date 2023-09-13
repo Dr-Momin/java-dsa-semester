@@ -1,8 +1,7 @@
-// TODO: BASIC NECESSARY Functions
+// TODO: SIMPLE NECESSARY Functions
 // isEmpty()
-// printAll()
+// printAll() or display()
 // length()
-// display()
 // displayRecursively()
 // getElement(int index)
 
