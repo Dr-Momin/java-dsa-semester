@@ -46,10 +46,21 @@ public class AdvanceLinkedList extends BasicLinkedList{
 
         AdvanceLinkedList list = new  AdvanceLinkedList();
 
+
         list.insertAtEnd(20);
         list.insertAtEnd(30);
+        list.insertAtHead(10);
+        list.insertAtEnd(40);
+        list.insertAtEnd(50);
+        list.insertAtEnd(60);
 
         list.display();
+
+
+        list.makeCircular();
+        System.out.println(list.isCircularLL());
+        list.displayCircular();
+
 
     }
 }

@@ -141,11 +141,11 @@ public class BasicLinkedList {
 
     public void display() {
         Node current = head;
-        System.out.println();
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;
         }
+        System.out.println();
     }
 
 
