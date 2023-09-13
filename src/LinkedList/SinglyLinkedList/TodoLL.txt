@@ -1,36 +1,32 @@
 
-// TODO: Functions
+// TODO: BASIC Functions
 // insertAtBeginning(String name)
 // insertAtBeginning(Node node)
 // insertAtEnd(String name)
 // insertAtEnd(Node node)
+// insertAtEndWithoutTail(int data)
 // insertAfterName(String name, Node node)
 // insertBeforeName(String name, Node node)
-// makeCircular()
-// printAll()
-
-
 // deleteAtIndex(index);
 // deleteAtEnd()
 // deleteAtHead()
-// findNthNodeFromEnd(int index)
-// deleteNthNodeFromEnd(int index)
 
+// printAll()
 // length()
 // display()
-// reverseLinkedList()
-// displayReverseRecursively()
 // displayRecursively()
 // getElement(index)
 
 
+// TODO: ADVANCE Functions
 // makeCircular()
+// isCircularLL()  or hasCycle()
 // isPalindrome()
-// hasCycle()
+// findNthNodeFromEnd(int index)
+// deleteNthNodeFromEnd(int index)
+// reverseLinkedList()
+// displayReverseRecursively()
 
-
-// Check List is Palindrome or not
-// Detect a cycle in LL & Trick to remove Cycle
 
 
 
@@ -43,5 +39,4 @@ Interview Questions
 
 3. Remove nth node from the end of the linked list. (Note: in one Traversal)
 
-
-4. Finding intersection of two Linked list.
+4. Finding intersection of two Linked list. (LeetCode)

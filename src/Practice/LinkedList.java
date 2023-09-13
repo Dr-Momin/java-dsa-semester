@@ -28,6 +28,7 @@ public class LinkedList {
             this.data = data;
             this.next = null;
         }
+
     }
 
 
@@ -35,43 +36,10 @@ public class LinkedList {
 
         Node head, tail;
 
-
-        public void insertAtEnd(int data){
+        public void insertAtBeginning(int data){
             Node newNode = new Node(data);
 
-            if(head == null){
-                head = tail = newNode;
-                return;
-            }
-
-            tail.next = newNode;
-            tail = newNode;
-
-        }
-
-        public void insertAtEndWithoutTail(int data){
-            Node newNode = new Node(data);
-
-            if(head == null){
-                head = newNode;
-                return;
-            }
-
-            Node currNode = head;
-            while (currNode.next != null){
-                currNode = currNode.next;
-            }
-
-            currNode.next = newNode;
-            currNode = newNode;
-
-        }
-
-
-        public void insertAtHead(int data){
-            Node newNode = new Node(data);
-
-            if(head == null){
+            if (head == null){
                 head = tail = newNode;
                 return;
             }
@@ -81,102 +49,77 @@ public class LinkedList {
 
         }
 
-        public void insertAtIndex(int index, int data){
+        public void insertAtEnd(int data){
             Node newNode = new Node(data);
-            Node currNode = head;
 
-            for (int i = 0; i < index-1; i++) {
+            if(isEmpty()){
+                head = tail = newNode;
+                return;
+            }
+
+            tail.next = newNode;
+            tail = newNode;
+        }
+
+        public void insertAtEndWithoutTail(int data){
+            Node newNode = new Node(data);
+
+            if(isEmpty()){
+                head = tail = newNode;
+                return;
+            }
+
+            Node currNode = head;
+            while (currNode.next != null){
                 currNode = currNode.next;
             }
 
-            newNode.next = currNode.next;
             currNode.next = newNode;
-
+            tail = newNode;
         }
 
 
-        public void deleteAtIndex(int index){
-            Node currNode = head;
-
-            for (int i = 0; i < index-1; i++) {
-                currNode = currNode.next;
-            }
-
-            currNode.next = currNode.next.next;
-
-        }
-
-
-        public void deleteAtEnd(){
-            Node currNode = head;
-
-            while(currNode.next.next != null){
-                currNode = currNode.next;
-            }
-
-            tail = currNode.next;
-            currNode.next = currNode.next.next;
-
-        }
-
-
-        public void deleteAtHead(){
-            if(head == null){
-                System.out.println("List is Empty");
+        public void makeCircular(){
+            if (isEmpty()){
+                System.out.println("List is Empty!!");
                 return;
             }
 
-            head = head.next;
+            tail.next = head;
+
         }
 
-        public void findNthNodeFromEnd(int indexFromLast){
+        public boolean isCircularLL(){
             Node slow = head, fast = head;
 
-            for (int i = 0; i < indexFromLast; i++) {
-                fast = fast.next;
-            }
-
-            while(fast != null){
-                slow = slow.next;
-                fast = fast.next;
-            }
-
-            System.out.print(slow.data + " ");
-        }
-
-        public void deleteNthNodeFromEnd(int indexFromLast){
-
-            if(indexFromLast == length()){
-                deleteAtHead();
-                return;
-            }
-
-            Node slow = head, fast = head;
-            for (int i = 0; i < indexFromLast+1; i++) {
-                fast = fast.next;
-            }
 
             while (fast != null){
                 slow = slow.next;
-                fast = fast.next;
+                fast = fast.next.next;
+
+                if (slow == fast){
+                    return true;
+                }
             }
 
-            slow.next = slow.next.next;
+            return false;
+        }
 
+
+        public boolean isEmpty(){
+            return head == null;
         }
 
         public int length(){
-            int length = 0;
             Node currNode = head;
+            int count = 0;
 
             while(currNode != null){
-                length++;
+                count++;
                 currNode = currNode.next;
             }
-
-            return length;
+            return count;
         }
-
 
         public void display(){
             Node currNode = head;
@@ -189,46 +132,7 @@ public class LinkedList {
         }
 
 
-        public void reverseLinkedList(){
-            Node prev, curr, next;
-            prev = head;
-            curr = head.next;
-            next = head.next.next;
-
-            while (curr != null){
-                next = curr.next;
-
-                curr.next = prev;
-                prev = curr;
-                curr = next;
-            }
-
-            head.next = null;
-            head = prev;
-        }
-
-
-        public void displayReverseRecursively(Node node){
-
-            if(node.next != null){
-                displayReverseRecursively(node.next);
-            }
-            System.out.print(node.data + " ");
-
-        }
-
-
-        public void makeCircular(){
-            Node currNode = head;
-
-            while(currNode.next != null){
-                currNode = currNode.next;
-            }
-
-            currNode.next = head;
-        }
-
-        public void displayCircularList(){
+        public void displayCircular(){
             Node currNode = head;
 
             do{
@@ -236,43 +140,13 @@ public class LinkedList {
                 currNode = currNode.next;
             }while (currNode != head);
 
-        }
-
-        public boolean isPalindrome(){
-            LL list1 = new LL();
-            list1.head = head;
-
-            LL list2 = new LL();
-            list2.head = head;
-            list2.reverseLinkedList();
-
-            Node l1 = list1.head, l2 = list2.head;
-            while (l1 != null ){
-                if(l1.data != l2.data){
-                    return false;
-                }
-                l1 = l1.next;
-            }
-
-            return true;
+            System.out.println();
         }
 
 
-        public boolean hasCycle(){
-            Node slow = head, fast = head.next.next;
-            while (fast.next != null){
-                slow = slow.next;
-                fast = fast.next.next;
-
-                if(fast == slow){
-                    return true;
-                }
-            }
-
-            return false;
-        }
 
     }
+
 
 
     public static void main(String[] args) {
@@ -286,30 +160,19 @@ public class LinkedList {
         list.insertAtEnd(40);
         list.insertAtEnd(50);
 
-//        list.display();
-//        list.reverseLinkedList();
-//
-//        list.display();
-
-//        list.displayReverseRecursively(list.head);
-
-//        list.makeCircular();
-//        list.displayCircularList();
-//        System.out.println(list.hasCycle());
-
-
-//        list.findNthNodeFromEnd(3);
-        list.display();
-        list.deleteNthNodeFromEnd(4);
         list.display();
 
 
-//        list.insertAtEnd(1);
-//        list.insertAtEnd(2);
-//        list.insertAtEnd(2);
-//        list.insertAtEnd(1);
-//
-//        System.out.println(list.isPalindrome());
+        list.insertAtBeginning(90);
+        list.display();
+
+
+        list.makeCircular();
+        list.displayCircular();
+//        list.display();
+
+//        System.out.println(list.isCircularLL());
+
 
     }
 }

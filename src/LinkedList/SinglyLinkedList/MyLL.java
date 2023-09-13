@@ -1,6 +1,7 @@
 package LinkedList.SinglyLinkedList;
 
 import LinkedList.SinglyLinkedList.questions.ReverseLL;
+import Practice.LinkedList;
 
 public class MyLL {
 
@@ -154,6 +155,43 @@ public class MyLL {
         }
 
 
+        public void makeCircular(){
+            if (isEmpty()){
+                System.out.println("List is Empty!!");
+                return;
+            }
+
+            tail.next = head;
+
+        }
+
+        public boolean isCircularLL(){
+            Node slow = head, fast = head;
+
+            while (fast != null){
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if (slow == fast){
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void displayCircular(){
+            Node currNode = head;
+
+            do{
+                System.out.print(currNode.data + " ");
+                currNode = currNode.next;
+            }while (currNode != head);
+
+            System.out.println();
+        }
+
+
         public void display(){
             Node current = head;
             System.out.println();
@@ -174,6 +212,11 @@ public class MyLL {
             return current.data;
         }
 
+        public boolean isEmpty(){
+            return head == null;
+        }
+
+
     }
 
 
@@ -192,6 +235,9 @@ public class MyLL {
 
         System.out.println("\n");
         list.getElement(2);
+
+
+
 
     }
 
