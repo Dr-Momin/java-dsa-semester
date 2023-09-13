@@ -1,5 +1,21 @@
+
+
+// TODO: Functions
 // push()
 // pop()
 // peek()
 // isEmpty()
+// display()
+// displayRecursively()
+
+
+// copyStackIntoAnotherStackInSameOrder()
+// pushAtBottom()
+// pushAtAnyIndex()
+// deleteAtBottom()
+// deleteAtIndex()
+// popFromBottom()
+// popFromIndex()
+
+
 
