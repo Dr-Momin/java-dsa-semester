@@ -22,12 +22,83 @@
 // TODO: ADVANCE Functions
 // makeCircular()
 // displayCircular()
-// isCircularLL()  or hasCycle()
+// isCircularLL()  or hasCycle() or detectLoop()
 // isPalindrome()
 // findNthNodeFromEnd(int index)
 // deleteNthNodeFromEnd(int index)
 // reverseLinkedList()
 // displayReverseRecursively()
+
+
+// TODO: CHAT-GPT Questions
+// addTwoLists( list1, list2)
+// reverse()
+// removeDuplicates()
+// mergeSortedLists(list1, list2)
+// splitAtMiddle()
+// rotate(int k)
+// intersection(Node head1, Node head2)
+// swapNodes(int x, int y)
+// flattenMultilevel()
+
+// splitAlternateNodes()
+
+
+
+
+===========================
+ Questions By ChatGPT
+===========================
+Implement the reverse() function: Write a function to reverse the singly linked list in-place.
+
+Implement the detectLoop() function: Write a function to detect if a loop exists in the singly linked list and return the starting node of the loop if it exists.
+
+Implement the removeDuplicates() function: Write a function to remove duplicates from an unsorted singly linked list.
+
+Implement the findNthFromEnd(int n) function: Write a function to find the nth node from the end of the singly linked list.
+
+Implement the mergeSortedLists(SinglyLinkedList list1, SinglyLinkedList list2) function: Write a function to merge two sorted singly linked lists into a single sorted list.
+
+Implement the splitAtMiddle() function: Write a function to split a singly linked list into two halves at the middle node.
+
+Implement the isPalindrome() function: Write a function to determine if a singly linked list is a palindrome.
+
+Implement the rotate(int k) function: Write a function to rotate the singly linked list by k positions to the right.
+
+Implement the intersection(Node head1, Node head2) function: Write a function to find the intersection point of two singly linked lists.
+
+Implement the addTwoLists(SinglyLinkedList list1, SinglyLinkedList list2) function: Write a function to add two numbers represented by linked lists, where each node contains a single digit.
+
+Implement the swapNodes(int x, int y) function: Write a function to swap two nodes in a singly linked list with values x and y.
+
+Implement the flattenMultilevel() function: If your singly linked list has nodes with both a next and a child pointer (for creating a multilevel structure), write a function to flatten it into a single-level singly linked list.
+
+========================================================
+========================================================
+Implement the splitAlternateNodes() function: Write a function to split a singly linked list into two lists, one containing nodes at even positions and the other containing nodes at odd positions.
+
+Implement the swapKthNodes(int k) function: Write a function to swap the kth node from the beginning with the kth node from the end in a singly linked list.
+
+Implement the addTwoListsReversed(SinglyLinkedList list1, SinglyLinkedList list2) function: Write a function to add two numbers represented by linked lists, where each node contains a single digit. The lists are given in reverse order (1's digit at the head).
+
+Implement the sortList() function: Write a function to sort a singly linked list using a sorting algorithm such as merge sort or quicksort.
+
+Implement the cloneWithRandomPointers() function: If your singly linked list has a random pointer in each node, write a function to clone the entire list while preserving the random pointers.
+
+Implement the findIntersection(Node head1, Node head2) function: Write a function to find the intersection point of two singly linked lists without modifying the original lists.
+
+Implement the reverseInGroups(int k) function: Write a function to reverse every k nodes in a singly linked list.
+
+Implement the rearrangeEvenOdd() function: Write a function to rearrange a singly linked list so that all even-positioned nodes come after all odd-positioned nodes.
+
+Implement the checkPalindromeUsingStack() function: Write a function to check if a singly linked list is a palindrome using a stack for comparison.
+
+Implement the detectAndRemoveLoop() function: Write a function to detect and remove a loop in a singly linked list, if it exists.
+
+Implement the removeDuplicatesUnsorted() function: Write a function to remove duplicates from an unsorted singly linked list without using additional data structures.
+
+Implement the reorderList() function: Write a function to reorder a singly linked list such that it becomes a zigzag fashion (e.g., 1-2-3-4-5 becomes 1-5-2-4-3).
+
 
 
 
