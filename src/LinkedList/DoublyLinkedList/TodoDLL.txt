@@ -1,33 +1,47 @@
 
-// TODO: Functions
-// insertAtBeginning(String name)
+
+// TODO: SIMPLE NECESSARY Functions
+// isEmpty()
+// printAll() or display()
+// length()
+// displayRecursively()
+// getElement(int index)
+
+
+// TODO: BASIC Functions
+// insertAtBeginning(int data)
 // insertAtBeginning(Node node)
-// insertAtEnd(String name)
+// insertAtEnd(int data)
 // insertAtEnd(Node node)
-// insertAfterName(String name, Node node)
-// insertBeforeName(String name, Node node)
-// makeCircular()
-// printAll()
-
-
-
-// insertAtEnd(data)
-// insertAtEndWithoutTail()
-// insertAtHead(data)
-// insertAtIndex(index, data)
-
-
+// insertAtEndWithoutTail(int data)
+// insertAfterName(int data, Node node)
+// insertBeforeName(int data, Node node)
 // deleteAtIndex(index);
 // deleteAtEnd()
 // deleteAtHead()
 
 
-// length()
-// display()
-// displayRecursively()
-// getElement(index)
+// TODO: ADVANCE Functions
+// makeCircular()
+// displayCircular()
+// isCircularLL()  or hasCycle() or detectLoop()
+// isPalindrome()
+// findNthNodeFromEnd(int index)
+// deleteNthNodeFromEnd(int index)
+// reverseLinkedList()
+// displayReverseRecursively()
 
 
-// Reverse a Linked List
-// Check List is Palindrome or not
-// Detect a cycle in LL & Trick to remove Cycle
+// TODO: CHAT-GPT Questions
+// addTwoLists( list1, list2)
+// reverse()
+// removeDuplicates()
+// mergeSortedLists(list1, list2)
+// splitAtMiddle()
+// rotate(int k)
+// intersection(Node head1, Node head2)
+// swapNodes(int x, int y)
+// flattenMultilevel()
+// splitAlternateNodes()
+
+

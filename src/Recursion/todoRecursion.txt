@@ -1,0 +1,8 @@
+
+
+// TODO: Basics
+// print Name 5 times
+// print linearly from 1 to N
+// print from N to 1
+// print linearly from 1 to N  (using Backtrack)
+// print from N to 1 (By BackTrack)

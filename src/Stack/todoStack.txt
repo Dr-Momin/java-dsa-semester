@@ -1,14 +1,17 @@
 
+// TODO: SIMPLE NECESSARY Functions
+// isEmpty()
+// printAll() or display()
+// length()
+// displayRecursively()
+// getElement(int index)
 
-// TODO: Functions
+// TODO: Basic Functions
 // push()
 // pop()
 // peek()
-// isEmpty()
-// display()
-// displayRecursively()
 
-
+// TODO: Advance Functions
 // copyStackIntoAnotherStackInSameOrder()
 // pushAtBottom()
 // pushAtAnyIndex()
