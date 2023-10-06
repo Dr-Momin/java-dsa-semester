@@ -3,6 +3,9 @@ package Recursion;
 public class Q1 {
 
 
+//    1. Develop a recursive algorithm for computing the product of a sequence of odd values.
+
+
     static int initialProduct = 1;
     public static int productOfOddSequence(int n){
 
@@ -14,10 +17,8 @@ public class Q1 {
             initialProduct = initialProduct * n;
             return productOfOddSequence(n-2);
         }
-        else{
-            return productOfOddSequence(n-1);
-        }
 
+        return productOfOddSequence(n-1);
     }
 
 
