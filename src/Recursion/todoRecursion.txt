@@ -6,3 +6,15 @@
 // print from N to 1
 // print linearly from 1 to N  (using Backtrack)
 // print from N to 1 (By BackTrack)
+
+
+
+// TODO: Parameterized & Functional Recursion
+// printSumParameterized()
+// printSumFunctional()
+
+
+
+
+
+

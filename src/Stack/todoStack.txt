@@ -12,6 +12,7 @@
 // peek()
 
 // TODO: Advance Functions
+// checkForBrackets()
 // copyStackIntoAnotherStackInSameOrder()
 // pushAtBottom()
 // pushAtAnyIndex()
