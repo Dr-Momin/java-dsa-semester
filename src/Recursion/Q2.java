@@ -15,12 +15,12 @@ public class Q2 {
         char firstChar = word.charAt(0);
         char lastChar = word.charAt(word.length() - 1);
 
-        if (firstChar != lastChar) {
-            return false;
+        if (firstChar == lastChar) {
+            String substring = word.substring(1, word.length() - 1);
+            return isPalindrome(substring);
         }
 
-        String substring = word.substring(1, word.length() - 1);
-        return isPalindrome(substring);
+        return false;
     }
 
 
